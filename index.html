@@ -5,32 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* Set display to none for image*/
-        #image {
-            display: none;
-        }
-
         body{
             background-color: gray;
+        }
+        #campo{
+            display: inline-flex;
+        }
+        #card1, #card2{
+            display: none;
         }
     </style>
 </head>
 <body>
     <p>Hello!</p>
-
-    <img id="image" src="teste.png" alt="">
-    <button type="button" onclick="show()" id="btnID">
-        Show Image
-    </button>
-    <script>
-        function show() {
-            /* Access image by id and change 
-            the display property to block*/
-            document.getElementById('image')
-                .style.display = "block";
-            document.getElementById('btnID')
-                .style.display = "none";
-        }
-    </script>
+    <div id="campo">
+        <button type="button" onclick="chooseCard1()" id="btn-choose-card-1">
+            Choose Card 1
+        </button>
+        <div id="card1">
+            <img width="200" class="image" id="imagem-carta-1" src="teste.png" alt="">
+            
+            <button type="button" onclick="" id="card1-hab1">
+                Habilidade 1
+            </button>
+            <button type="button" onclick="" id="card1-hab2">
+                Habilidade 2
+            </button>
+        </div>
+        <button type="button" onclick="chooseCard2()" id="btn-choose-card-2">
+            Choose Card 2
+        </button>
+        <div id="card2">
+            <img width="200" class="image" id="imagem-carta-2" src="teste.png" alt="">
+            
+            <button type="button" onclick="" id="card2-hab1">
+                Habilidade 1
+            </button>
+            <button type="button" onclick="" id="card2-hab2">
+                Habilidade 2
+            </button>
+        </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
